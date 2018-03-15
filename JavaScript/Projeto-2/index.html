@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Lógica de Programação com HTML e JavaScript</title>
+</head>
+<body>
+
+<h3>Álcool ou Gasolina?</h3>
+
+<script>
+	
+	function pulaLinha(){
+
+		document.write("<br><hr><br>");
+		
+	}
+
+var tanque = 40;
+var caminhoComGasolina = 480;
+
+var consumoDeGasolina = caminhoComGasolina / tanque;
+document.write("O Consumo de Gasolina foi de : " + consumoDeGasolina + " Km por Litro.<br>")
+
+var caminhoComAlcool = 300;
+var consumoDeAlcool = caminhoComAlcool / tanque;
+pulaLinha();
+
+document.write("O Consumo de Álcool foi de : " + consumoDeAlcool + " Km por Litro.<br>")
+
+pulaLinha();
+
+document.write("<h3> Média de idade</h3>")
+	var idadeLinda = 12;
+	var idadeGuaraciara = 15;
+	var idadePerola = 13;
+
+	var media = (idadeLinda + idadeGuaraciara + idadePerola) / 3;
+
+	document.write ("A média de idade das minhas filhas é : " + Math.round(media) + " anos.");
+
+	pulaLinha();
+
+	var idadeAndre = 28;
+	var idadeMarco = 22;
+	var diferencaIdade = idadeAndre - idadeMarco;
+
+	function mostraIdade(){
+
+		document.write("Nossa diferença de idade é de : " + diferencaIdade + " Anos.");
+	}
+
+	mostraIdade();
+
+	pulaLinha();
+
+	var primeiraGeracao = 1500;
+	var diasAtuais = 2017;
+	var geracoes = Math.round((diasAtuais - primeiraGeracao) / 28);
+
+	function geracoesQuePassaram (){
+
+		document.write("Se passaram  "+geracoes+"  gerações até os dias de hoje.")
+	}
+
+	geracoesQuePassaram();
+
+	pulaLinha();
+
+	function mostra (frase){
+		document.write("<big>"+frase+"</big>");
+		pulaLinha();
+	}
+
+	var ano = 2012;
+
+	mostra("Eu nasci em : " + (ano - 25));
+	mostra("Adriano nasceu em : " + (ano - 26));
+	mostra("Paulo nasceu em : " + (ano -32))
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+@media screen and (min-width: 768px){
+
+	nav{
+		flex-direction: row;
+		justify-content: space-around;
+
+	}
+	nav ul{
+		flex-direction: row;
+		width: 70%;
+	}
+	header p{
+		height: 250px;
+		height: 30vh;
+		justify-content: center;
+		min-width: 250px;
+		color: black;
+		
+
+	}
+	#sobremim p{
+
+		height: 150px;
+		height: 15vh;
+		justify-content: center;
+		min-width: 250px;
+
+
+
+	}
+
+	#habilidades{
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		max-width: 1000px;
+		margin: 0 auto;
+
+	}
+	#habilidades h2{
+		text-align: center;
+		width: 100%;
+
+	}
+	#habilidades div{
+		flex-grow: 1;
+		flex-basis: 150px;
+		padding: 0 10px;
+	}
+	#porfifolio h2{
+		width: 100%;
+		text-align: center;
+
+	}
+	#portifolio img{
+		width: 33.33333333%
+	}
+	#contato{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 800px;
+		margin: 0 auto;
+		
+
+	}
+	#contato h2, #contato p{
+		width: 100%;
+		
+	}
+	
+}

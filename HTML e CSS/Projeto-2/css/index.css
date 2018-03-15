@@ -1,0 +1,318 @@
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+    perspective: 15px;
+    perspective-origin: 50% 100px;
+    display: block;
+
+}
+.titulo-principal{
+    background-image: radial-gradient(circle at bottom , #1E90FF, #000 150%, #000, #1E90FF 150% );
+    background-attachment: fixed;
+}
+@keyframes aparecepalavras{
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.foto-home {
+    height: 200px;
+    border-radius: 10%50%/50%10%;
+    webkit-depth: 10px;
+    box-shadow: 0 0 1em black;
+    animation: aparecepalavras 5;
+
+}
+.saudacao p {
+    font-size: 1.5em;
+    color: #99A;
+    line-height: 1;
+    padding: 2em;
+
+}
+.saudacao-inicio {
+    font-size: 3em;
+    color: #889;
+}
+.saudacao-ultima-linha  {
+    text-align: right;
+    display: block;
+    animation: flutua 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+@keyframes flutua {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
+}
+
+
+
+.saudacao strong {
+    font-size: 2em;
+    color: #000;
+}
+.saudacao em {
+    color: #1E90FF;
+    font-size: 4em;
+    transform: rotate(-5deg) skew(-10deg);;
+    display: inline-block;
+}
+.saudacao:hover em{
+    animation-play-state: paused;
+}
+.botao-index {
+    font-size: 1.25em;
+    background-color: #808080;
+    color: #FFF;
+    padding: .5em;
+    border: .2em solid black;
+    width: 40ch;
+    margin: 2em auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: .5s
+
+
+
+}
+.botao-index:hover{
+
+        background-color: #3CB371;
+}
+.secao-inico{
+    padding: 2em;
+}
+.secao-inicio h2 {
+    font-size: 3em;
+    text-shadow: 2px 2px #000;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+}
+.trabalhos {
+    background-color: #3C1D3D;
+    border-top: .5em solid #000;
+    border-bottom: .5em solid #000;
+    background-image: radial-gradient(circle at bottom , #1E90FF, #000 150%, #000, #1E90FF 150% );
+}
+.trabalhos h2 {
+    color: #FFF;
+}
+.trabalhos ul {
+    overflow: hidden;
+    border: .5em solid black;
+}
+.trabalhos li {
+   
+    width: 33.333%;
+    float:left;
+}
+.trabalhos img {
+    width: 100%;
+    display: block;
+}
+.blog {
+    background-color: #999;
+    color: #FFF;
+    border-bottom: .5em solid #851944;
+    position: relative;
+background-image: radial-gradient(circle at bottom , #1E90FF, #000 150%, #000, #1E90FF 150% );
+}
+.blog small{
+    position: relative;
+    top: -2em;
+
+}
+.blog li a {
+    color: #FCF;
+    padding: .5em;
+    display: block;
+}
+.palavra-home, .titilo-principal{
+    perspective: 6px;
+    position: absolute;
+    top: 50;
+    left: 50;
+    width: 0%;
+    height: 0%;
+    font-size: 0.3em;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    font-size: 150%;
+    padding-top: 250px;
+    transform-style: preserve-3d;
+
+
+
+}
+
+.eficiencia {
+    top: 7%;
+    left: 65%;
+    -webkit-transfome: rotate (-5deg);
+            transform: rotate(-5deg);
+    
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px) scale(0.25);
+   
+
+    
+}
+.boas-praticas {
+    top: 12%;
+    left: 70%;    
+    transform: rotate(5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px) scale(0.25);
+   
+}
+.codigo-limpo {
+    top: 18%;
+    left: 78%;
+    transform: rotate(5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px)scale(0.25);
+    opacity: .6;
+}
+.css3 {
+    top: 19%;
+    left: 63%;
+    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px) scale(0.25);
+    opacity: .6;
+
+    
+}
+.html5 {    
+    top: 11%;
+    left: 80%;
+    transform: rotate(-10deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px) scale(0.25);
+  
+}
+.javascript {
+    top: 5%;
+    left: 13%;
+    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px)scale(0.25);
+
+}
+.acessibilidade {
+    top: 18%;
+    left: 10%;
+    transform: rotate(5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px) scale(0.25);
+    opacity: .6;
+
+}
+.responsivo {
+    top: 15%;
+    left: 21%;
+    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px) scale(0.25);
+   
+}
+.otimizacoes {
+    
+    top: 20%;
+    left: 26%;
+    transform: rotate(5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px)scale(0.25)
+
+}
+.agilidade {
+    
+    top: 12%;
+    left: 33%;
+    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px) scale(0.25);
+
+}
+.design {
+    
+    top: 5%;
+    left: 30%;
+    transform: rotate(5deg);
+    transform: translate(-50%, -50%) rotate(-5deg)
+    translateZ(2px) scale(0.25);
+    opacity: .6;
+
+}
+.blog .inicio-post {
+    position: absolute;
+    top: 4em;
+    height: 8em;
+    left: 30%;
+    right: 4em;
+    background-color: #F2FFFC;
+    color: #000;
+    padding: 1.5em
+}
+.banner-git{
+    width: 14em;
+    line-height: 0;
+    padding: 1em 0;
+    box-sizing: border-box;
+    text-shadow: .5px .5px black;
+    text-align: center;
+    text-decoration: none;
+    background-color: #808080;
+    color: white;
+    border: .2px solid black;
+    box-shadow: 0 0 1em black;
+    font-size: .4em;
+    font-family: "Open Sans Condensed", sans-serif;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: 0 0;
+   transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
+}
+
+.banner-git:hover{
+    background-color: #3CB371 ;
+}
+
+
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding: 2em;
+}
+footer h2{
+    font-size: 3em;
+}
+footer a {
+    color: #F99;
+}
+main {
+    width: 100%;
+    padding-bottom: 0;
+    
+    
+}
+
+div {
+    width: calc(50% - 2em);
+    padding: 1em;
+}

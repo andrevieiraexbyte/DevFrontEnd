@@ -1,0 +1,234 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Crimson Text", "Times New Roman", serif;
+    background-color: #F2FFFC;
+    font-size: 120%;
+    line-height: 1.5;
+    
+    
+
+}
+
+h1,h2,
+.subtitulo-principal {
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    font-size: 50%;
+     animation: aparece 4s;
+    
+}
+
+h1  {
+    
+    text-transform: uppercase;
+    font-size: 60px;
+    text-shadow: 2px 2px black;
+
+}
+@keyframes aparece{
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.titulo-principal {
+    font-size: 300%;
+    text-align: center;
+    background-image: radial-gradient(circle at bottom , #1E90FF, #000 150%, #000, #1E90FF 150% );
+    color: #FFF;
+    padding: 2rem;
+    border-bottom: .5rem solid #000;
+    margin-top: 0;
+    animation: aparece 2s;
+    
+}
+
+.subtitulo-texto {
+    font-size: 30px;
+    clear: both;
+}
+
+main a {
+    color: #851944;
+}
+
+main p {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.navegacao-site {
+    width: calc( 0.9 * 300px);
+    text-align: center;
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    padding: 20px;
+
+}
+
+.navegacao-site a {
+    color: inherit;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    text-transform: lowercase;
+}
+
+.navegacao-site h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.rodape-pagina {
+    background-color: rgba(0,0,0,0.3);
+    color: #000;
+    padding: 20px;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.rodape-pagina:hover{
+    background-color: gray;
+}
+
+
+
+.container {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 0;
+
+}
+
+.container > p::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+
+
+.github {
+    background-image: url(../imagens/github.png);
+}
+
+.twitter {
+    background-image: url(../imagens/twitter.png);
+}
+
+.linkedin {
+    background-image: url(../imagens/linkedin.png);
+}
+
+main {
+    width: calc(100% - 0.9 * 300px);
+    width: 80%;
+    
+    
+    padding-bottom: 80px;
+
+}
+
+.minha-foto,
+.navegacao-site {
+float: right;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+    box-sizing: border-box;
+
+}
+
+.navegacao-site {
+    width: 20%;
+   
+    position: relative;
+    top: 300px;
+    background-image: radial-gradient(circle at bottom , #1E90FF, #000 150%, #000, #1E90FF 150% );
+}
+
+.navegacao-site a:hover, .navegacao-site a:focus{
+    
+    text-shadow: 0 0 2px gray;
+    
+   
+
+}
+.minha-foto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 300px;
+}
+
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-indent: 0px;
+    width: 300%;
+    background: black;
+    font-size: .75em;
+
+}
+
+.icones-redes-sociais li {
+    display: inline-block;
+}
+.icones-redes-sociais a{
+    position: relative;
+}
+
+.icones-redes-sociais a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-indent: -999999px;
+    
+    
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: 'Acesse meus projetos';
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(.5em) rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

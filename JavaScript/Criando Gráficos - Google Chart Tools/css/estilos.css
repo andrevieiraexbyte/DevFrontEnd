@@ -1,0 +1,1 @@
+.chart.draw(data, { width: 400, height: 240, title: 'Gastos do mês'});

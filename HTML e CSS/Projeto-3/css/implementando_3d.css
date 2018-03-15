@@ -1,0 +1,24 @@
+.bolas{
+	transform-style: preserve-3d;
+}
+
+.bola1{
+	transform: translateZ(2px);
+}
+
+.bola2{
+	transform: translateZ(-1px);
+}
+
+.cubo1{
+	perspective: 8px;
+	transform-style: preserve-3d;
+}
+.cubo2{
+	perspective: 80px;
+	transform-style: preserve-3d;
+}
+.cubo3{
+	perspective: 42px;
+	transform-style: preserve-3d;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="moduloPizzaria">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/moduloPizzariaController.js"></script>
+
+  </head>
+  <body ng-controller="moduloPizzariaController">
+    <section class="container">
+
+        <div class="row">
+          <h1>{{ nomeFantasia }}</h1>
+        </div>
+
+        <div class="row">
+            <div class="form-inline text-center">
+                <input type="text" ng-model="pesquisar" class="form-control" placeholder="Buscar" />
+            </div>
+            <form name="formCliente">
+
+                <div ng-class="{'has-error': formCliente.nomeCliente.$invalid && formCliente.nomeCliente.$dirty, 'has-success': formCliente.nomeCliente.$valid, 'form-group': true}">
+                  <input type="text" ng-model="cliente.nome" ng-required="true" name="nomeCliente" class="form-control" placeholder="Nome" />
+                </div>
+                <div ng-class="{'has-error': formCliente.telefoneCliente.$invalid && formCliente.telefoneCliente.$dirty, 'has-success': formCliente.telefoneCliente.$valid, 'form-group': true}">
+                  <input type="text" ng-model="cliente.telefone" ng-required="true"  name="telefoneCliente" class="form-control" placeholder="Telefone ####-####" ng-pattern="/^\d{4,5}-\d{4}$/"/>
+                </div>
+                <div ng-class="{'has-error': formCliente.enderecoCliente.$invalid && formCliente.enderecoCliente.$dirty, 'has-success': formCliente.enderecoCliente.$valid, 'form-group': true}">
+                  <input type="text" ng-model="cliente.endereco" ng-required="true" name="enderecoCliente" class="form-control" placeholder="Endereço" />
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success" ng-hide="editando" ng-disable="formCliente.$invalid" ng-click="funcAdicionar(cliente)">Adicionar</button>
+                  <button class="btn btn-info" ng-show="editando" ng-disable="formCliente.$invalid" ng-click="funcSalvar(cliente)">Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <table class="table table-striped">
+              <thead>
+                  <tr>
+                    <th ng-click="funcOrdem('nome')" style="cursor:pointer"> Nome</th>
+                    <th ng-click="funcOrdem('telefone')" style="cursor:pointer"> Telefone</th>
+                    <th ng-click="funcOrdem('endereco')" style="cursor:pointer"> Endereço</th>
+                    <th> Ação</th>
+                  <tr>
+              </thead>
+              <tbody>
+                  <!-- orderBy utilizado de forma estatica, selecionando a coluna, e o true deixa em modo reverso -->
+                  <!-- <tr ng-repeat="cliente in listaClientes | filter:pesquisar | orderBy:'nome':true"> -->
+                  <tr ng-repeat="cliente in listaClientes | filter:pesquisar | orderBy:ordem:reverso">
+                    <td>{{ cliente.nome }}</td>
+                    <td>{{ cliente.telefone }}</td>
+                    <td>{{ cliente.endereco }}</td>
+                    <td>
+                      <button class="btn btn-default" ng-click="funcEditar(cliente)">Editar</button>
+                      <button class="btn btn-danger" ng-click="funcExcluir(cliente)">Excluir</button>
+                      <!-- <button class="btn btn-danger" ng-click="funcExcluir($index)">Excluir</button> -->
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+
+    </section>
+  </body>
+</html>

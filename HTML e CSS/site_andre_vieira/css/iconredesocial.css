@@ -1,0 +1,68 @@
+
+.github {
+    background-image: url(../imagens/githubicon.png);
+}
+
+.google {
+    background-image: url(../imagens/googleicon.png);
+}
+
+.linkedin {
+    background-image: url(../imagens/linkedin.png);
+}
+.icones-redes-sociais{
+	display: flex;
+	width: 15%;
+	text-decoration: none;
+	color: #f1f1f1;
+    flex-direction: row;
+    padding-left: 50px;
+    justify-content: space-around;
+
+}
+
+.icones-redes-sociais li {
+    display: inline-block;
+
+}
+
+
+.icones-redes-sociais a {
+    width: 40px;
+    height: 20px;
+    display: flex ;
+    text-indent: -999999px;
+
+	
+    
+    
+}
+
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-indent: 5px;
+    width: 300%;
+    background-color: white;
+	color:black;
+    font-size: .75em;
+	border-radius: 5px; 
+
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: 'Acesse meus projetos';
+    width: 1em;
+    height: 1em;
+    background-color: white;
+	color:black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(.5em) rotate(45deg);
+}

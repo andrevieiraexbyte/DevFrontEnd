@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h3>for aninhado</h3>
+
+
+	<script>
+			
+			function pulaLinha() {
+		
+				document.write("<br>");
+			}
+
+			function mostra(frase) {
+		
+				document.write(frase);
+				pulaLinha();
+			}
+
+			for (var linha = 1; linha <= 3; linha++) {
+
+				
+
+				for (var coluna =  1; coluna <= 10; coluna++) {
+					document.write("*");
+				}
+				pulaLinha();
+				
+			}
+
+    
+
+   
+</script>
+
+
+</body>
+</html>

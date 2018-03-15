@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h3>Jogo de Adivinhar</h3>
+
+		<script>
+
+			function pulaLinha (){
+
+				document.write("<br><br>")
+			}
+			
+			function mostra(frase){
+
+				document.write(frase)
+				pulaLinha();
+			}
+
+			function sorteia (n){
+
+			return  Math.round(Math.random() * n);
+				 
+
+			}
+			
+			var numeroPensado = sorteia(100);
+
+			console.log(numeroPensado);
+			
+			
+
+			var maximoDeTentativas = 3;
+			var tentativas = 1;
+
+			while(tentativas <= maximoDeTentativas){
+
+				var chute = parseInt(prompt("Digite seu número"));
+
+				if (chute == numeroPensado) {
+
+					mostra("Você acertou!");
+					break;
+
+				} else{
+
+					mostra("Você errou! ");
+				}
+
+				
+
+				tentativas++;
+
+			}	
+			
+			mostra("Número sorteado é : "+numeroPensado);
+
+			
+		</script>
+
+</body>
+</html>

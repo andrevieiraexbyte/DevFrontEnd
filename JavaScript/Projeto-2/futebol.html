@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<h3>Calculando pontos do time</h3>
+
+	<script> 
+
+	function pulaLinha() {
+		
+		document.write("<br>");
+
+	}
+
+	function mostra(frase) {
+		
+		document.write(frase);
+		pulaLinha();
+		
+	}
+
+
+		
+		
+		
+
+
+	var pontosAnoPassado = parseInt(prompt("Quantos pontos seu time teve no ano passado? "));
+	var vitorias = parseInt(prompt("Entre com o número de vitórias: "));
+	var empates = parseInt(prompt("Entre com o número de empates: "));
+	var pontos = vitorias * 3 + empates;
+
+
+
+	mostra("Seu time tem : " + pontos + " pontos.");
+
+
+		if  (pontos > pontosAnoPassado){
+				
+				mostra("Seu time está melhor que o ano passado.");
+		}
+		if (pontos < pontosAnoPassado){
+				
+				mostra("Seu time está pior que o ano passado.")
+		}
+		if (pontos == pontosAnoPassado){
+				
+				mostra("Seu time está igual que o ano passado.")
+		}	
+
+	
+	
+
+
+
+	</script>
+
+
+</body>
+</html>
