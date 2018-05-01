@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressNunjucks = require('express-nunjucks');
 var indexRouter = require('./routes/alunos');
-
+var methodOverride = require('method-override');
 
 var app = express();
 
@@ -19,6 +19,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// configuração do modulo methodOverride.
+app.use(methodOverride(function (req, res) {
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+  var method = req.body._method
+  delete req.body._method
+  return method
+  }
+  }));
 
 app.use('/', indexRouter);
 
