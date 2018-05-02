@@ -1,7 +1,36 @@
-{% extends "layout.njk" %}
-
-{% block pagina %}
-
-// código da página aqui
+{% extends "layout.njk" %} {% block pagina %} // código da página aqui
+<h1>Alunos Cadastrados</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Sobre Nome</th>
+            <th>CPF</th>
+            <th>RG</th>
+            <th>Orgão Expedidor</th>
+            <th>Data de Nascimento</th>
+            <th>Email</th>
+            <th>Sexo</th>
+            <th>Matrícula</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Californication</td>
+            <td>Red Hot Chili Peppers</td>
+            <td>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </td>
+            <td>
+                <a href="#" class="btn btn-primary">Editar</a>
+                <a href="#" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 {% endblock %}
