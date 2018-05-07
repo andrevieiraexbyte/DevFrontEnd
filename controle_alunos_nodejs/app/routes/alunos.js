@@ -16,6 +16,9 @@ router.get('/add', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
+    db("alunos").insert(req.body).then((ids) => {
+        res.redirect('/');
+    },next)
 });
 
 router.get('/edit/:id', (req, res, next) =>{
