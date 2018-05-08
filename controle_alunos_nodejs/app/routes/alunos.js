@@ -36,6 +36,14 @@ router.put('/edit/:id', (req, res, next) =>{
 });
 
 router.delete('/delete/:id', (req, res, next)=>{
+    const {id} = req.params;
+
+    db("alunos").where('id', id).delete().then((result) =>  {
+        if(result === 0){
+            return res.send(400);
+        }
+        res.redirect('/');
+    },next)
 });
 
 module.exports = router;
