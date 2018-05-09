@@ -4,7 +4,7 @@ var router = express.Router();
 var db = require('../db');
 
 router.get('/', (req, res, next) => {
-    db("alunos").then((alunos) => {
+    db("cad_alunos").then((alunos) => {
         res.render('index', {
             alunos: alunos
         });
@@ -16,18 +16,28 @@ router.get('/add', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
-    db("alunos").insert(req.body).then((ids) => {
+    db("cad_alunos").insert(req.body).then((ids) => {
         res.redirect('/');
     },next)
 });
 
 router.get('/edit/:id', (req, res, next) =>{
+    const {id} = req.params;
+
+    db("cad_alunos").where("id", id).first().then((aluno) => {
+        if (!aluno) {
+            return res.render(400);
+        }
+        res.render("edit.njk", {
+            aluno: aluno
+        });
+    },next)
 });
 
 router.put('/edit/:id', (req, res, next) =>{
     const {id} = req.params;
 
-    db("alunos").where('id', id).update(req.body).then((result) => {
+    db("cad_alunos").where('id', id).update(req.body).then((result) => {
         if (result === 0) {
             return res.send(400);
         }
@@ -38,7 +48,7 @@ router.put('/edit/:id', (req, res, next) =>{
 router.delete('/delete/:id', (req, res, next)=>{
     const {id} = req.params;
 
-    db("alunos").where('id', id).delete().then((result) =>  {
+    db("cad_alunos").where('id', id).delete().then((result) =>  {
         if(result === 0){
             return res.send(400);
         }
